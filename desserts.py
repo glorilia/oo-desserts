@@ -46,6 +46,12 @@ class Cupcake:
         print("Sorry, that cupcake doesn't exist")
 
 
+class Brownie(Cupcake):
+
+    def __init__(self, name, price, qty):
+        super().__init__(name, 'chocolate', price, qty)
+
+
 
 if __name__ == '__main__':
     import doctest
