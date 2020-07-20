@@ -37,7 +37,13 @@ class Cupcake:
             ingredients[index] = (ingredient[0], ingredient[1] * amount)
 
         return ingredients
-        
+
+    @classmethod
+    def get(cls, name):
+
+        if name in cls.cache:
+            return cls.cache[name]
+        print("Sorry, that cupcake doesn't exist")
 
 
 
