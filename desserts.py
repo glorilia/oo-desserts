@@ -3,11 +3,22 @@
 
 class Cupcake:
     """A cupcake."""
+    cache = {}
+
+    def __init__(self, name, flavor, price, qty=0):
+        self.name = name
+        self.flavor = flavor
+        self.price = float(price)
+        self.qty = int(qty)
+        self.cache[name] = self
 
     def __repr__(self):
         """Human-readable printout for debugging."""
 
         return f'<Cupcake name="{self.name}" qty={self.qty}>'
+
+    def add_stock(self, amount):
+        self.qty += amount
 
 
 if __name__ == '__main__':
